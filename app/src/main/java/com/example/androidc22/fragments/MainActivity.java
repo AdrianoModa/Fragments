@@ -21,15 +21,15 @@ public class MainActivity extends AppCompatActivity {
         int orientation = getWindowManager().getDefaultDisplay().getRotation();
         if(orientation == Configuration.ORIENTATION_PORTRAIT){
 
-            Fragment f1 = new Fragment();
-            fTransaction.replace(android.R.id.content, f1);
-            Toast.makeText(this, "Fragment 1 em Ação", Toast.LENGTH_LONG);
+            Fragment fragment1 = new Fragment();
+            fTransaction.replace(android.R.id.content, fragment1);
+            Toast.makeText(this, "Fragment 1 em Ação", Toast.LENGTH_SHORT).show();
 
         }else{
 
-            Fragment f2 = new Fragment();
-            fTransaction.replace(android.R.id.content, f2);
-            Toast.makeText(this, "Fragment 2 em Ação", Toast.LENGTH_LONG);
+            Fragment fragement2 = new Fragment();
+            fTransaction.replace(android.R.id.content, fragement2);
+            Toast.makeText(this, "Fragment 2 em Ação", Toast.LENGTH_SHORT).show();
 
         }
         fTransaction.commit();
