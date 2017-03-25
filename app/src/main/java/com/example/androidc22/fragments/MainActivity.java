@@ -15,20 +15,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FragmentManager fmanager = getSupportFragmentManager();
-        FragmentTransaction fTransaction = fmanager.beginTransaction();
+        FragmentManager fManager = getSupportFragmentManager();
+        FragmentTransaction fTransaction = fManager.beginTransaction();
 
         int orientation = getWindowManager().getDefaultDisplay().getRotation();
         if(orientation == Configuration.ORIENTATION_PORTRAIT){
 
-            Fragment fragment1 = new Fragment();
-            fTransaction.replace(android.R.id.content, fragment1);
+            Fragment1 f1 = new Fragment1();
+            fTransaction.replace(android.R.id.content, f1);
             Toast.makeText(this, "Fragment 1 em Ação", Toast.LENGTH_SHORT).show();
 
         }else{
 
-            Fragment fragement2 = new Fragment();
-            fTransaction.replace(android.R.id.content, fragement2);
+            Fragment2 f2 = new Fragment2();
+            fTransaction.replace(android.R.id.content, f2);
             Toast.makeText(this, "Fragment 2 em Ação", Toast.LENGTH_SHORT).show();
 
         }
